@@ -10,33 +10,38 @@ else return("scissors") }
 
 // Function for playing a round //
 
+
 function playRound(playerSelection, computerSelection) { playerSelection = playerSelection.toLowerCase();
 if (playerSelection === "rock" && computerSelection === "rock") {
-    return("It's a draw!")} 
+    return(drawStatement)} 
 else if (playerSelection === "rock" && computerSelection === "scissors") {
-    return("You Win! Rock beats scissors!") }
+    return(winStatement) }
 else if (playerSelection === "rock" && computerSelection === "paper") {
-    return("You lose! Paper beats rock!")
+    return(loseStatement)
 }
 if (playerSelection === "paper" && computerSelection === "paper") {
-    return("It's a draw!")} 
+    return(drawStatement)} 
 else if (playerSelection === "paper" && computerSelection === "rock") {
-    return("You Win! Paper beats rock!") }
+    return(winStatement) }
 else if (playerSelection === "paper" && computerSelection === "scissors") {
-    return("You lose! Scissors beats paper!")
+    return(loseStatement)
 }
 if (playerSelection === "scissors" && computerSelection === "scissors") {
-    return("It's a draw!")} 
+    return(drawStatement)} 
 else if (playerSelection === "scissors" && computerSelection === "paper") {
-    return("You Win! Scissors beats paper!") }
+    return(winStatement) }
 else if (playerSelection === "scissors" && computerSelection === "rock") {
-    return("You lose! Rock beats scissors!")
+    return(loseStatement)
 }
-else { return("Oops didn't catch that! Must enter rock, paper or scissors!")}
-    
+else { return(defaultStatement)}
 }
 
-const playerSelection = "" ;
+const playerSelection = "sciors" ;
 const computerSelection = getComputerChoice();
+
+const drawStatement = "It's a draw!"
+const winStatement = `You Win! ${playerSelection} beats ${computerSelection}`
+const loseStatement = `You lose! ${computerSelection} beats ${playerSelection}`
+const defaultStatement = "Oops didn't catch that! Must enter rock, paper or scissors!"
 
 console.log(playRound(playerSelection, computerSelection))
