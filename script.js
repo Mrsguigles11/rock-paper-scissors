@@ -65,6 +65,42 @@ else if (resultR2 === loseStatement) {
 else {
     alert(`You Drew! ${playerCounter} - ${computerCounter}`)
 }
+let resultR3 = playRound(prompt("Rock, Paper, Scissors?"), computerSelection);
+if (resultR3 === winStatement) {
+    playerCounter = playerCounter + 1;
+    alert(`You Win! ${playerCounter} - ${computerCounter}`)
+}
+else if (resultR3 === loseStatement) {
+    computerCounter = computerCounter + 1;
+    alert(`You Lose! ${playerCounter} - ${computerCounter}`)
+}
+else {
+    alert(`You Drew! ${playerCounter} - ${computerCounter}`)
+}
+let resultR4 = playRound(prompt("Rock, Paper, Scissors?"), computerSelection);
+if (resultR4 === winStatement) {
+    playerCounter = playerCounter + 1;
+    alert(`You Win! ${playerCounter} - ${computerCounter}`)
+}
+else if (resultR4 === loseStatement) {
+    computerCounter = computerCounter + 1;
+    alert(`You Lose! ${playerCounter} - ${computerCounter}`)
+}
+else {
+    alert(`You Drew! ${playerCounter} - ${computerCounter}`)
+}
+let resultR5 = playRound(prompt("Rock, Paper, Scissors?"), computerSelection);
+if (resultR5 === winStatement) {
+    playerCounter = playerCounter + 1;
+    alert(`You Win! ${playerCounter} - ${computerCounter}`)
+}
+else if (resultR5 === loseStatement) {
+    computerCounter = computerCounter + 1;
+    alert(`You Lose! ${playerCounter} - ${computerCounter}`)
+}
+else {
+    alert(`You Drew! ${playerCounter} - ${computerCounter}`)
+}
      }
 
 
