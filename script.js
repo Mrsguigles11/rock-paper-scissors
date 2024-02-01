@@ -1,4 +1,4 @@
-// Function for computer //
+// Function for computers choice //
 
 function getComputerChoice() { const randomNum = Math.floor(Math.random() * 3) + 1; 
 if (randomNum === 1) {
@@ -44,62 +44,59 @@ let computerCounter = 0;
 let resultR1 = playRound(prompt("Rock, Paper, Scissors?"), computerSelection);
 if (resultR1 === winStatement) {
     playerCounter = playerCounter + 1;
-    alert(`You Win! ${playerCounter} - ${computerCounter}`)
+    console.log(`You Win! ${playerCounter} - ${computerCounter}`)
 }
 else if (resultR1 === loseStatement) {
     computerCounter = computerCounter + 1;
-    alert(`You Lose! ${playerCounter} - ${computerCounter}`)
+    console.log(`You Lose! ${playerCounter} - ${computerCounter}`)
 }
 else {
-    alert(`You Drew! ${playerCounter} - ${computerCounter}`)
+    console.log(`You Drew! ${playerCounter} - ${computerCounter}`)
 }
 let resultR2 = playRound(prompt("Rock, Paper, Scissors?"), computerSelection);
 if (resultR2 === winStatement) {
     playerCounter = playerCounter + 1;
-    alert(`You Win! ${playerCounter} - ${computerCounter}`)
+    console.log(`You Win! ${playerCounter} - ${computerCounter}`)
 }
 else if (resultR2 === loseStatement) {
     computerCounter = computerCounter + 1;
-    alert(`You Lose! ${playerCounter} - ${computerCounter}`)
+    console.log(`You Lose! ${playerCounter} - ${computerCounter}`)
 }
 else {
-    alert(`You Drew! ${playerCounter} - ${computerCounter}`)
+    console.log(`You Drew! ${playerCounter} - ${computerCounter}`)
 }
 let resultR3 = playRound(prompt("Rock, Paper, Scissors?"), computerSelection);
-if (resultR3 === winStatement) {
-    playerCounter = playerCounter + 1;
-    alert(`You Win! ${playerCounter} - ${computerCounter}`)
-}
+if (resultR3 === winStatement) alert
 else if (resultR3 === loseStatement) {
     computerCounter = computerCounter + 1;
-    alert(`You Lose! ${playerCounter} - ${computerCounter}`)
+    console.log(`You Lose! ${playerCounter} - ${computerCounter}`)
 }
 else {
-    alert(`You Drew! ${playerCounter} - ${computerCounter}`)
+    console.log(`You Drew! ${playerCounter} - ${computerCounter}`)
 }
 let resultR4 = playRound(prompt("Rock, Paper, Scissors?"), computerSelection);
 if (resultR4 === winStatement) {
     playerCounter = playerCounter + 1;
-    alert(`You Win! ${playerCounter} - ${computerCounter}`)
+    console.log(`You Win! ${playerCounter} - ${computerCounter}`)
 }
 else if (resultR4 === loseStatement) {
     computerCounter = computerCounter + 1;
-    alert(`You Lose! ${playerCounter} - ${computerCounter}`)
+    console.log(`You Lose! ${playerCounter} - ${computerCounter}`)
 }
 else {
-    alert(`You Drew! ${playerCounter} - ${computerCounter}`)
+    console.log(`You Drew! ${playerCounter} - ${computerCounter}`)
 }
 let resultR5 = playRound(prompt("Rock, Paper, Scissors?"), computerSelection);
 if (resultR5 === winStatement) {
     playerCounter = playerCounter + 1;
-    alert(`You Win! ${playerCounter} - ${computerCounter}`)
+    console.log(`You Win! ${playerCounter} - ${computerCounter}`)
 }
 else if (resultR5 === loseStatement) {
     computerCounter = computerCounter + 1;
-    alert(`You Lose! ${playerCounter} - ${computerCounter}`)
+    console.log(`You Lose! ${playerCounter} - ${computerCounter}`)
 }
 else {
-    alert(`You Drew! ${playerCounter} - ${computerCounter}`)
+    console.log(`You Drew! ${playerCounter} - ${computerCounter}`)
 }
      }
 
