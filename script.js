@@ -42,7 +42,7 @@ else { return(defaultStatement)}
 function playGame () { let playerCounter = 0;
 let computerCounter = 0;
 let resultR1 = playRound(prompt("Rock, Paper, Scissors?"), getComputerChoice());
-if (resultR1 === winStatement) {
+if (resultR1 == winStatement) {
     playerCounter = playerCounter + 1;
     console.log(`You Win! ${playerCounter} - ${computerCounter}`)
 }
@@ -72,7 +72,10 @@ else {
     console.log(defaultStatement)
 }
 let resultR3 = playRound(prompt("Rock, Paper, Scissors?"), getComputerChoice());
-if (resultR3 === winStatement) alert
+if (resultR3 === winStatement) {
+    playerCounter = playerCounter + 1;
+    console.log(`You Win! ${playerCounter} - ${computerCounter}`); 
+}
 else if (resultR3 === loseStatement) {
     computerCounter = computerCounter + 1;
     console.log(`You Lose! ${playerCounter} - ${computerCounter}`)
@@ -92,7 +95,7 @@ else if (resultR4 === loseStatement) {
     computerCounter = computerCounter + 1;
     console.log(`You Lose! ${playerCounter} - ${computerCounter}`)
 }
-else if (resultR4 === drawStatement) {
+else if (getComputerChoice()=== drawStatement) {
     console.log(`You Drew! ${playerCounter} - ${computerCounter}`)
 }
 else {
@@ -111,8 +114,7 @@ else if (resultR5 === drawStatement) {
     console.log(`You Drew! ${playerCounter} - ${computerCounter}`)
 }
 else {
-    console.log(defaultStatement)
-}
+    console.log(defaultStatement); }
 let endResult = "You Win! Computer Loses!";
 if (playerCounter > computerCounter) {
     console.log(endResult)}
@@ -124,14 +126,12 @@ else if (computerCounter = playerCounter) {
 }
      }
 
-
-
 const playerSelection = "";
-const computerSelection = getComputerChoice();  
+const computerSelection = getComputerChoice();
 
-const drawStatement = "It's a draw!"
-const winStatement = `You Win! ${playerSelection} beats ${computerSelection}`
-const loseStatement = `You lose! ${computerSelection} beats ${playerSelection}`
+const drawStatement = "It's a draw!";
+const winStatement = `You Win! ${playerSelection} beats ${computerSelection}`;
+const loseStatement = `You lose! ${computerSelection} beats ${playerSelection}`;
 const defaultStatement = "Oops didn't catch that! Must enter rock, paper or scissors!"
 
 console.log(playGame())
