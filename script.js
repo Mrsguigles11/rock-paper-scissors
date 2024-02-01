@@ -41,7 +41,7 @@ else { return(defaultStatement)}
 
 function playGame () { let playerCounter = 0;
 let computerCounter = 0;
-let resultR1 = playRound(prompt("Rock, Paper, Scissors?"), computerSelection);
+let resultR1 = playRound(prompt("Rock, Paper, Scissors?"), getComputerChoice());
 if (resultR1 === winStatement) {
     playerCounter = playerCounter + 1;
     console.log(`You Win! ${playerCounter} - ${computerCounter}`)
@@ -53,7 +53,7 @@ else if (resultR1 === loseStatement) {
 else {
     console.log(`You Drew! ${playerCounter} - ${computerCounter}`)
 }
-let resultR2 = playRound(prompt("Rock, Paper, Scissors?"), computerSelection);
+let resultR2 = playRound(prompt("Rock, Paper, Scissors?"), getComputerChoice());
 if (resultR2 === winStatement) {
     playerCounter = playerCounter + 1;
     console.log(`You Win! ${playerCounter} - ${computerCounter}`)
@@ -65,7 +65,7 @@ else if (resultR2 === loseStatement) {
 else {
     console.log(`You Drew! ${playerCounter} - ${computerCounter}`)
 }
-let resultR3 = playRound(prompt("Rock, Paper, Scissors?"), computerSelection);
+let resultR3 = playRound(prompt("Rock, Paper, Scissors?"), getComputerChoice());
 if (resultR3 === winStatement) alert
 else if (resultR3 === loseStatement) {
     computerCounter = computerCounter + 1;
@@ -74,7 +74,7 @@ else if (resultR3 === loseStatement) {
 else {
     console.log(`You Drew! ${playerCounter} - ${computerCounter}`)
 }
-let resultR4 = playRound(prompt("Rock, Paper, Scissors?"), computerSelection);
+let resultR4 = playRound(prompt("Rock, Paper, Scissors?"), getComputerChoice());
 if (resultR4 === winStatement) {
     playerCounter = playerCounter + 1;
     console.log(`You Win! ${playerCounter} - ${computerCounter}`)
@@ -86,7 +86,7 @@ else if (resultR4 === loseStatement) {
 else {
     console.log(`You Drew! ${playerCounter} - ${computerCounter}`)
 }
-let resultR5 = playRound(prompt("Rock, Paper, Scissors?"), computerSelection);
+let resultR5 = playRound(prompt("Rock, Paper, Scissors?"), getComputerChoice());
 if (resultR5 === winStatement) {
     playerCounter = playerCounter + 1;
     console.log(`You Win! ${playerCounter} - ${computerCounter}`)
@@ -97,6 +97,15 @@ else if (resultR5 === loseStatement) {
 }
 else {
     console.log(`You Drew! ${playerCounter} - ${computerCounter}`)
+}
+let endResult = "You Win! Computer Loses!";
+if (playerCounter > computerCounter) {
+    console.log(endResult)}
+else if (computerCounter > playerCounter) {
+    console.log("You Lose! Computer Wins!")
+}
+else if (computerCounter = playerCounter) {
+    console.log("It's a Draw!")
 }
      }
 
