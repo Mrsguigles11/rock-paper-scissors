@@ -49,9 +49,17 @@ const defaultStatement = "Oops didn't catch that! Must enter rock, paper or scis
 const rockButton = document.querySelector("#rock");
 const paperButton = document.querySelector("#paper");
 const scissorsButton = document.querySelector("#scissors");
+const body = document.querySelector("body");
+
+const div = document.createElement("div");
+body.appendChild(div);
+div.style.marginTop = "20px";
+
 
 rockButton.addEventListener("click", () => {
     let result = playRound("rock", getComputerChoice());
-    console.log(result);
+    let resultDiv = document.createElement("div");
+    resultDiv.textContent = result;
+    div.appendChild(resultDiv);
 })
 
