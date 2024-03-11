@@ -15,9 +15,9 @@ function playRound(player, computer) { player = player.toLowerCase();
 if (player === "rock" && computer === "rock") {
     return(drawStatement)} 
 else if (player === "rock" && computer === "scissors") {
-    return(winStatement) }
+    return(`You Win! ${player} beats ${computer}`) }
 else if (player === "rock" && computer === "paper") {
-    return(loseStatement)
+    return(`You lose! ${computer} beats ${player}`)
 }
 if (player === "paper" && computer === "paper") {
     return(drawStatement)} 
@@ -50,4 +50,8 @@ const rockButton = document.querySelector("#rock");
 const paperButton = document.querySelector("#paper");
 const scissorsButton = document.querySelector("#scissors");
 
-console.log(scissorsButton)
+rockButton.addEventListener("click", () => {
+    let result = playRound("rock", getComputerChoice());
+    console.log(result);
+})
+
