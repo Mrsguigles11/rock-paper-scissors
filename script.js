@@ -36,96 +36,6 @@ else if (player === "scissors" && computer === "rock") {
 else { return(defaultStatement)}
 }
 
-
-// Function for BO5 //
-
-function playGame () { let playerCounter = 0;
-let computerCounter = 0;
-let resultR1 = playRound(prompt("Rock, Paper, Scissors?"), getComputerChoice());
-if (resultR1 == winStatement) {
-    playerCounter = playerCounter + 1;
-    console.log(`You Win! ${playerCounter} - ${computerCounter}`)
-}
-else if (resultR1 === loseStatement) {
-    computerCounter = computerCounter + 1;
-    console.log(`You Lose! ${playerCounter} - ${computerCounter}`)
-}
-else if (resultR1 === drawStatement) {
-    console.log(`You Drew! ${playerCounter} - ${computerCounter}`)
-}
-else {
-    console.log(defaultStatement)
-}
-let resultR2 = playRound(prompt("Rock, Paper, Scissors?"), getComputerChoice());
-if (resultR2 === winStatement) {
-    playerCounter = playerCounter + 1;
-    console.log(`You Win! ${playerCounter} - ${computerCounter}`)
-}
-else if (resultR2 === loseStatement) {
-    computerCounter = computerCounter + 1;
-    console.log(`You Lose! ${playerCounter} - ${computerCounter}`)
-}
-else if (resultR2 === drawStatement) {
-    console.log(`You Drew! ${playerCounter} - ${computerCounter}`)
-}
-else {
-    console.log(defaultStatement)
-}
-let resultR3 = playRound(prompt("Rock, Paper, Scissors?"), getComputerChoice());
-if (resultR3 === winStatement) {
-    playerCounter = playerCounter + 1;
-    console.log(`You Win! ${playerCounter} - ${computerCounter}`); 
-}
-else if (resultR3 === loseStatement) {
-    computerCounter = computerCounter + 1;
-    console.log(`You Lose! ${playerCounter} - ${computerCounter}`)
-}
-else if (resultR3 === drawStatement) {
-    console.log(`You Drew! ${playerCounter} - ${computerCounter}`)
-}
-else {
-    console.log(defaultStatement)
-}
-let resultR4 = playRound(prompt("Rock, Paper, Scissors?"), getComputerChoice());
-if (resultR4 === winStatement) {
-    playerCounter = playerCounter + 1;
-    console.log(`You Win! ${playerCounter} - ${computerCounter}`)
-}
-else if (resultR4 === loseStatement) {
-    computerCounter = computerCounter + 1;
-    console.log(`You Lose! ${playerCounter} - ${computerCounter}`)
-}
-else if (getComputerChoice()=== drawStatement) {
-    console.log(`You Drew! ${playerCounter} - ${computerCounter}`)
-}
-else {
-    console.log(defaultStatement)
-}
-let resultR5 = playRound(prompt("Rock, Paper, Scissors?"), getComputerChoice());
-if (resultR5 === winStatement) {
-    playerCounter = playerCounter + 1;
-    console.log(`You Win! ${playerCounter} - ${computerCounter}`)
-}
-else if (resultR5 === loseStatement) {
-    computerCounter = computerCounter + 1;
-    console.log(`You Lose! ${playerCounter} - ${computerCounter}`)
-}
-else if (resultR5 === drawStatement) {
-    console.log(`You Drew! ${playerCounter} - ${computerCounter}`)
-}
-else {
-    console.log(defaultStatement); }
-let endResult = "You Win! Computer Loses!";
-if (playerCounter > computerCounter) {
-    console.log(endResult)}
-else if (computerCounter > playerCounter) {
-    console.log("You Lose! Computer Wins!")
-}
-else if (computerCounter = playerCounter) {
-    console.log("It's a Draw!")
-}
-     }
-
 const playerSelection = "";
 const computerSelection = getComputerChoice();
 
@@ -134,4 +44,10 @@ const winStatement = `You Win! ${playerSelection} beats ${computerSelection}`;
 const loseStatement = `You lose! ${computerSelection} beats ${playerSelection}`;
 const defaultStatement = "Oops didn't catch that! Must enter rock, paper or scissors!"
 
-console.log(playGame())
+// DOM script //
+
+const rockButton = document.querySelector("#rock");
+const paperButton = document.querySelector("#paper");
+const scissorsButton = document.querySelector("#scissors");
+
+console.log(scissorsButton)
