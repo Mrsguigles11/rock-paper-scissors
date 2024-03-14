@@ -12,6 +12,7 @@ else return("scissors") }
 
 
 function playRound(player, computer) { player = player.toLowerCase();
+    
 if (player === "rock" && computer === "rock") {
     return(drawStatement)} 
 else if (player === "rock" && computer === "scissors") {
@@ -55,11 +56,23 @@ const div = document.createElement("div");
 body.appendChild(div);
 div.style.marginTop = "20px";
 
+let playerCounter = 0;
+let computerCounter = 0;
 
 rockButton.addEventListener("click", () => {
     let result = playRound("rock", getComputerChoice());
     let resultDiv = document.createElement("div");
     resultDiv.textContent = result;
     div.appendChild(resultDiv);
+      if (result === 'You Win! rock beats scissors') {
+        playerCounter += 1;
+      }
+      else if (result === 'You lose! paper beats rock') {
+        computerCounter += 1;
+      }
+    console.log(playerCounter);
+    console.log(computerCounter);  
 })
+
+
 
