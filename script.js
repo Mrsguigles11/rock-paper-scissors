@@ -23,16 +23,16 @@ else if (player === "rock" && computer === "paper") {
 if (player === "paper" && computer === "paper") {
     return(drawStatement)} 
 else if (player === "paper" && computer === "rock") {
-    return(winStatement) }
+    return(`You Win! ${player} beats ${computer}`) }
 else if (player === "paper" && computer === "scissors") {
-    return(loseStatement)
+    return(`You lose! ${computer} beats ${player}`)
 }
 if (player === "scissors" && computer === "scissors") {
     return(drawStatement)} 
 else if (player === "scissors" && computer === "paper") {
-    return(winStatement) }
+    return(`You Win! ${player} beats ${computer}`) }
 else if (player === "scissors" && computer === "rock") {
-    return(loseStatement)
+    return(`You lose! ${computer} beats ${player}`)
 }
 else { return(defaultStatement)}
 }
@@ -70,9 +70,30 @@ rockButton.addEventListener("click", () => {
       else if (result === 'You lose! paper beats rock') {
         computerCounter += 1;
       }
-    console.log(playerCounter);
-    console.log(computerCounter);  
 })
 
+paperButton.addEventListener("click", () => {
+    let result = playRound("paper", getComputerChoice());
+    let resultDiv = document.createElement("div");
+    resultDiv.textContent = result;
+    div.appendChild(resultDiv);
+      if (result === 'You Win! paper beats rock') {
+        playerCounter += 1;
+      }
+      else if (result === 'You lose! scissors beats paper') {
+        computerCounter += 1;
+      }
+})
 
-
+scissorsButton.addEventListener("click", () => {
+    let result = playRound("scissors", getComputerChoice());
+    let resultDiv = document.createElement("div");
+    resultDiv.textContent = result;
+    div.appendChild(resultDiv);
+      if (result === 'You Win! scissors beats paper') {
+        playerCounter += 1;
+      }
+      else if (result === 'You lose! rock beats scissors') {
+        computerCounter += 1;
+      }
+})
