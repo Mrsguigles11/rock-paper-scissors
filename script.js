@@ -1,11 +1,11 @@
 // Function for computers choice //
 
 function getComputerChoice() { const randomNum = Math.floor(Math.random() * 3) + 1; 
-if (randomNum === 1) {
-    return("rock") } 
-else if (randomNum === 2) {
-    return("paper") }
-else return("scissors") }
+    if (randomNum === 1) {
+        return("rock") } 
+    else if (randomNum === 2) {
+        return("paper") }
+    else return("scissors") }
 
 
 // Function for playing a round //
@@ -13,27 +13,24 @@ else return("scissors") }
 
 function playRound(player, computer) { player = player.toLowerCase();
     
-if (player === "rock" && computer === "rock") {
-    return(drawStatement)} 
-else if (player === "rock" && computer === "scissors") {
-    return(`You Win! ${player} beats ${computer}`) }
-else if (player === "rock" && computer === "paper") {
-    return(`You lose! ${computer} beats ${player}`)
-}
-if (player === "paper" && computer === "paper") {
-    return(drawStatement)} 
-else if (player === "paper" && computer === "rock") {
-    return(`You Win! ${player} beats ${computer}`) }
-else if (player === "paper" && computer === "scissors") {
-    return(`You lose! ${computer} beats ${player}`)
-}
-if (player === "scissors" && computer === "scissors") {
-    return(drawStatement)} 
-else if (player === "scissors" && computer === "paper") {
-    return(`You Win! ${player} beats ${computer}`) }
-else if (player === "scissors" && computer === "rock") {
-    return(`You lose! ${computer} beats ${player}`)
-}
+    if (player === "rock" && computer === "rock") {
+        return(drawStatement)} 
+    else if (player === "rock" && computer === "scissors") {
+        return(`You Win! ${player} beats ${computer}`) }
+    else if (player === "rock" && computer === "paper") {
+        return(`You lose! ${computer} beats ${player}`) }
+    if (player === "paper" && computer === "paper") {
+        return(drawStatement)} 
+    else if (player === "paper" && computer === "rock") {
+        return(`You Win! ${player} beats ${computer}`) }
+    else if (player === "paper" && computer === "scissors") {
+        return(`You lose! ${computer} beats ${player}`) }
+    if (player === "scissors" && computer === "scissors") {
+        return(drawStatement)} 
+    else if (player === "scissors" && computer === "paper") {
+        return(`You Win! ${player} beats ${computer}`) }
+    else if (player === "scissors" && computer === "rock") {
+        return(`You lose! ${computer} beats ${player}`) }
 }
 
 const drawStatement = "It's a draw!";
@@ -107,16 +104,14 @@ scissorsButton.addEventListener("click", () => {
 function checkResult() {
     if (playerCounter === 5) {
         while (div.firstChild) {
-        div.removeChild(div.lastChild);
-        }
+            div.removeChild(div.lastChild); }
         alert("You Win!");
         playerCounter = 0;
         computerCounter = 0;
     } 
     else if (computerCounter === 5) {
         while (div.firstChild) {
-        div.removeChild(div.lastChild);
-        }
+            div.removeChild(div.lastChild); }
         alert("You Lose!");
         playerCounter = 0;
         computerCounter = 0;
