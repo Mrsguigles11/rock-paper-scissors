@@ -46,13 +46,17 @@ const paperButton = document.querySelector("#paper");
 const scissorsButton = document.querySelector("#scissors");
 const body = document.querySelector("body");
 
-const div = document.createElement("div");
-body.appendChild(div);
-div.style.marginTop = "20px";
-
 let playerCounter = 0;
 let computerCounter = 0;
 
+const score = document.createElement("div");
+body.appendChild(score);
+score.style.marginTop = "20px";
+score.textContent = `${playerCounter} - ${computerCounter}`;
+
+const div = document.createElement("div");
+body.appendChild(div);
+div.style.marginTop = "20px";
 
 
 rockButton.addEventListener("click", () => {
@@ -67,6 +71,7 @@ rockButton.addEventListener("click", () => {
         computerCounter += 1;
       }
     checkResult();
+    score.textContent = `${playerCounter} - ${computerCounter}`;
 })
 
 paperButton.addEventListener("click", () => {
@@ -80,7 +85,8 @@ paperButton.addEventListener("click", () => {
       else if (result === 'You lose! scissors beats paper') {
         computerCounter += 1;
       }
-      checkResult();
+    checkResult();
+    score.textContent = `${playerCounter} - ${computerCounter}`;
 })
 
 scissorsButton.addEventListener("click", () => {
@@ -95,6 +101,7 @@ scissorsButton.addEventListener("click", () => {
         computerCounter += 1;
       }
     checkResult();
+    score.textContent = `${playerCounter} - ${computerCounter}`;
 })
 
 function checkResult() {
