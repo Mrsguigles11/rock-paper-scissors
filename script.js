@@ -59,6 +59,7 @@ div.style.marginTop = "20px";
 let playerCounter = 0;
 let computerCounter = 0;
 
+
 rockButton.addEventListener("click", () => {
     let result = playRound("rock", getComputerChoice());
     let resultDiv = document.createElement("div");
@@ -70,6 +71,7 @@ rockButton.addEventListener("click", () => {
       else if (result === 'You lose! paper beats rock') {
         computerCounter += 1;
       }
+    checkResult();
 })
 
 paperButton.addEventListener("click", () => {
@@ -83,6 +85,7 @@ paperButton.addEventListener("click", () => {
       else if (result === 'You lose! scissors beats paper') {
         computerCounter += 1;
       }
+      checkResult();
 })
 
 scissorsButton.addEventListener("click", () => {
@@ -96,4 +99,23 @@ scissorsButton.addEventListener("click", () => {
       else if (result === 'You lose! rock beats scissors') {
         computerCounter += 1;
       }
+    checkResult();
 })
+
+function checkResult() {
+    if (playerCounter === 5) {
+        while (div.firstChild) {
+        div.removeChild(div.lastChild);
+        }
+        alert("You Win!");
+        playerCounter = 0;
+        computerCounter = 0;
+    } 
+    else if (computerCounter === 5) {
+        while (div.firstChild) {
+        div.removeChild(div.lastChild);
+        }
+        alert("You Lose!");
+        playerCounter = 0;
+        computerCounter = 0;
+    } }
