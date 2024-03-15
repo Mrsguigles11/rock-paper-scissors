@@ -34,16 +34,10 @@ else if (player === "scissors" && computer === "paper") {
 else if (player === "scissors" && computer === "rock") {
     return(`You lose! ${computer} beats ${player}`)
 }
-else { return(defaultStatement)}
 }
 
-const playerSelection = "";
-const computerSelection = getComputerChoice();
-
 const drawStatement = "It's a draw!";
-const winStatement = `You Win! ${playerSelection} beats ${computerSelection}`;
-const loseStatement = `You lose! ${computerSelection} beats ${playerSelection}`;
-const defaultStatement = "Oops didn't catch that! Must enter rock, paper or scissors!"
+
 
 // DOM script //
 
@@ -58,6 +52,7 @@ div.style.marginTop = "20px";
 
 let playerCounter = 0;
 let computerCounter = 0;
+
 
 
 rockButton.addEventListener("click", () => {
